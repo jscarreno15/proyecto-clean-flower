@@ -1,0 +1,34 @@
+version: '3'
+
+services:
+  md-backend-personas:
+    restart: on-failure
+    container_name: md-backend-clean-flower
+    build:
+      context: ./clean-flower-back
+      dockerfile: Dockerfile
+    expose:
+      - 8080
+    ports:
+      - 8080:8080
+    networks:
+      - my-network
+      
+  md-frontend-personas:
+    restart: on-failure
+    container_name: md-frontend-clean-flower
+    build:
+      context: ./clean-flower-front
+      dockerfile: Dockerfile
+    expose:
+      - 4200
+    ports:
+      - 4200:4200
+    depends_on:
+      - md-backend-clean-flower
+    networks:
+      - my-network
+
+networks:
+  my-network:
+    driver: bridge 

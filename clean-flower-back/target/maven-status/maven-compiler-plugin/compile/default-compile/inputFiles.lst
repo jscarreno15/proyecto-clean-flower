@@ -1,0 +1,15 @@
+/home/jcarreno/Documentos/PERSONAL/proyecto-cleanflower/clean-flower-back/src/main/java/com/clean/flower/BackendApplication.java
+/home/jcarreno/Documentos/PERSONAL/proyecto-cleanflower/clean-flower-back/src/main/java/com/clean/flower/configuration/ModelMapperConfig.java
+/home/jcarreno/Documentos/PERSONAL/proyecto-cleanflower/clean-flower-back/src/main/java/com/clean/flower/controller/ProductosController.java
+/home/jcarreno/Documentos/PERSONAL/proyecto-cleanflower/clean-flower-back/src/main/java/com/clean/flower/dtos/ProductoDTO.java
+/home/jcarreno/Documentos/PERSONAL/proyecto-cleanflower/clean-flower-back/src/main/java/com/clean/flower/entity/ProductoEntity.java
+/home/jcarreno/Documentos/PERSONAL/proyecto-cleanflower/clean-flower-back/src/main/java/com/clean/flower/exception/ControllerAdvice.java
+/home/jcarreno/Documentos/PERSONAL/proyecto-cleanflower/clean-flower-back/src/main/java/com/clean/flower/exception/InfoErrorException.java
+/home/jcarreno/Documentos/PERSONAL/proyecto-cleanflower/clean-flower-back/src/main/java/com/clean/flower/exception/ProductoNoEncontradoException.java
+/home/jcarreno/Documentos/PERSONAL/proyecto-cleanflower/clean-flower-back/src/main/java/com/clean/flower/exception/ValidacionesException.java
+/home/jcarreno/Documentos/PERSONAL/proyecto-cleanflower/clean-flower-back/src/main/java/com/clean/flower/repository/ProductoRepository.java
+/home/jcarreno/Documentos/PERSONAL/proyecto-cleanflower/clean-flower-back/src/main/java/com/clean/flower/service/ProductoService.java
+/home/jcarreno/Documentos/PERSONAL/proyecto-cleanflower/clean-flower-back/src/main/java/com/clean/flower/service/impl/ProductoServiceImpl.java
+/home/jcarreno/Documentos/PERSONAL/proyecto-cleanflower/clean-flower-back/src/main/java/com/clean/flower/specification/ProductoSpecification.java
+/home/jcarreno/Documentos/PERSONAL/proyecto-cleanflower/clean-flower-back/src/main/java/com/clean/flower/util/ConvertidorFecha.java
+/home/jcarreno/Documentos/PERSONAL/proyecto-cleanflower/clean-flower-back/src/main/java/com/clean/flower/util/Util.java
