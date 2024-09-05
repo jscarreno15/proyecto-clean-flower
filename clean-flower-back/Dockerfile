@@ -28,7 +28,7 @@ FROM adoptopenjdk:21-jre-hotspot
 COPY --from=build /app/backend-clean-flower/target/backend-1.0.0-.jar backend-1.0.0-.jar
 
 # Expone el puerto en el que se ejecuta la aplicación Spring Boot
-EXPOSE 4200
+EXPOSE 8888
 
 # Define el comando para ejecutar la aplicación Spring Boot
 CMD ["java", "-jar", "backend-1.0.0-.jar"]
