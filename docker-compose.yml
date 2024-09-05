@@ -1,7 +1,26 @@
-version: '3'
 
 services:
-  md-backend-personas:
+
+  db:
+    image: mysql:8.0.0
+    container_name: mysql
+    restart: always
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_USER=root
+      - MYSQL_PASSWORD=root
+    volumes:
+      - ./mysql-conf:/etc/mysql/mysql.conf.d
+      - ./docker.cnf:/etc/mysql/conf.d
+      - ./initPersistencia.sh:/docker-entrypoint-initdb.d/initPersistencia.sh
+    expose:
+      - 3306
+    ports:
+      - 3306:3306
+    networks:
+      - my-network
+      
+  md-backend-clean-flower:
     restart: on-failure
     container_name: md-backend-clean-flower
     build:
@@ -14,7 +33,7 @@ services:
     networks:
       - my-network
       
-  md-frontend-personas:
+  md-frontend-clean-flower:
     restart: on-failure
     container_name: md-frontend-clean-flower
     build:

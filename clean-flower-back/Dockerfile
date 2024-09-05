@@ -1,4 +1,4 @@
-FROM adoptopenjdk:11-jdk-hotspot as build
+FROM openjdk:21-jdk-slim  as build
 
 # Directorio de trabajo dentro del contenedor
 WORKDIR /app/
@@ -22,14 +22,14 @@ RUN mvn clean package
 WORKDIR /app/backend-clean-flower/target
 
 # Inicia una nueva etapa de construcción con una imagen base más ligera para ejecutar la aplicación
-FROM adoptopenjdk:21-jre-hotspot
+FROM openjdk:21-jdk-slim 
 
 # Copia el archivo JAR generado en la etapa anterior al directorio de trabajo
-COPY --from=build /app/backend-clean-flower/target/backend-1.0.0-.jar backend-1.0.0-.jar
+COPY --from=build /app/backend-clean-flower/target/backend-1.0.0.jar backend-1.0.0.jar
 
 # Expone el puerto en el que se ejecuta la aplicación Spring Boot
 EXPOSE 8888
 
 # Define el comando para ejecutar la aplicación Spring Boot
-CMD ["java", "-jar", "backend-1.0.0-.jar"]
+CMD ["java", "-jar", "backend-1.0.0.jar"]
 
