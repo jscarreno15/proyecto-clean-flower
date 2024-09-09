@@ -44,7 +44,8 @@ export class AltaEdicionComponent implements OnInit{
 
   guardarProducto(){
     let body = this.formProducto.value as ProductoDTO;
-    this.productoService.guardarProducto(body).subscribe({
+    let peticion = body.id ? this.productoService.editarProducto(body) : this.productoService.guardarProducto(body);
+    peticion.subscribe({
       next: (data:ProductoDTO) => {
         this.producto = data;
         this.success();
